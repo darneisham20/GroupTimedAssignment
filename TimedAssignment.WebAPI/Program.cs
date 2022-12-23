@@ -23,8 +23,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-
-// Develop Branch
-// Darneisha's Branch
-// Jamie was here!
-// Cory's Branch
