@@ -13,7 +13,7 @@ namespace TimedAssignment.Data.Entities
         public Guid AuthorId { get; set; }
         public List<ReplyEntity> Replies { get; set; }
 
-        [ForeignKey(nameof(Post))]
+        //[ForeignKey(nameof(Post))]
         public PostEntity PostId { get; set; }
     }
 }
