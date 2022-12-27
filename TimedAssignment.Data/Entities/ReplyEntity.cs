@@ -10,7 +10,7 @@ namespace TimedAssignment.Data.Entities
     {
         public int Id { get; set; }
 
-        //[ForeignKey(nameof(Comment))]
+        // [ForeignKey(nameof(Comment))]
         public CommentEntity CommentId { get; set; }
 
         [Required]
