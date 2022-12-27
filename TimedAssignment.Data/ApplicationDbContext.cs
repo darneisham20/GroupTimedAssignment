@@ -12,4 +12,9 @@ using TimedAssignment.Data.Entities;
         }
 
         public DbSet<UserEntity> Users { get; set; }
+        public DbSet<CommentEntity> Comments { get; set; }
+        public DbSet<PostEntity> Posts { get; set; }
+        public DbSet<ReplyEntity> Replies { get; set; }
+    
+
     }
