@@ -8,13 +8,13 @@ namespace TimedAssignment.Data.Entities
 {
     public class PostEntity
     {
-        //[Key]
+        [Key]
         public int Id { get; set; }
 
-        //[Required]
+        [Required]
         public string Title { get; set; }
 
-        //[Required]
+        [Required]
         public string Text { get; set; }
 
         public List<CommentEntity> Comments { get; set; }
