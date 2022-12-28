@@ -13,4 +13,12 @@ namespace TimedAssignment.WebAPI.Controllers
     {
         
     }
+
+    // private readonly IUserService _userService;
+    // private readonly ITokenService _tokenService;
+    // public UserController(IUserService userService, ITokenService tokenService)
+    // {
+    //     _userService = userService;
+    //     _tokenService = tokenService;
+    // }
 }
