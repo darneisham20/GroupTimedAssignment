@@ -14,6 +14,7 @@ namespace TimedAssignment.Data.Entities
 
         [ForeignKey(nameof(Comment))]
         public int CommentEntityId { get; set; }
+
         public virtual CommentEntity Comment { get; set; }
 
         [Required]
