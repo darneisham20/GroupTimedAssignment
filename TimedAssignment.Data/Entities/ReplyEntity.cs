@@ -8,6 +8,7 @@ namespace TimedAssignment.Data.Entities
 {
     public class ReplyEntity
     {
+        [Key]
         public int Id { get; set; }
 
         // [ForeignKey(nameof(Comment))]
