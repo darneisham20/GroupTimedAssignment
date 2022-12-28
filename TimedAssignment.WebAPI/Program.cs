@@ -9,6 +9,7 @@ using Microsoft.OpenApi.Models;
 using TimedAssignment.Services.Post;
 using TimedAssignment.Services.Comment;
 using TimedAssignment.Services.Reply;
+using TimedAssignment.Services.Token;
 
 
 
@@ -30,6 +31,11 @@ builder.Services.AddScoped<ICommentService, CommentService>();
 builder.Services.AddScoped<IPostService, PostService>();
 builder.Services.AddScoped<IReplyService, ReplyService>();
 builder.Services.AddScoped<IUserService, UserService>();
+
+// Adding User Service/Interface for Dependency Interjection
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ITokenService, TokenService>();
+
 
 builder.Services.AddScoped<IUserService, UserService>();
 // Using statement not working: Microsoft.IdentityModel.Tokens for the Token Validation Parameters and Symmetric Security Key not allowing refactoring.
