@@ -14,6 +14,8 @@ namespace TimedAssignment.WebAPI.Controllers
         
     }
 
+    // TOKEN ENDPOINT IN USERCONTROLLER NOT WORKING
+
     // private readonly IUserService _userService;
     // private readonly ITokenService _tokenService;
     // public UserController(IUserService userService, ITokenService tokenService)
