@@ -11,6 +11,23 @@ namespace TimedAssignment.WebAPI.Controllers
     [ApiController]
     public class PostController : ControllerBase
     {
-        
+        private readonly IPostService _postService;
+
+        public PostController(IPostService postService)
+        {
+            _postService = postService;
+        }
+
+        [HttpPost ("PostContent")]
+        public async Task<IActionResult> PostContent([FromBody] CreatePost request)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            
+            if (await _postService.CreatePostAsync(request))
+                return Ok("You have successfully posted!");
+
+            return BadRequest("Your post was not posted.");
+        }
     }
 }
