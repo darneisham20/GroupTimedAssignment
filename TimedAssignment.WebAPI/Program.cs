@@ -3,7 +3,7 @@ using TimedAssignment.Services.User;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
-// using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 // using TimedAssignment.Services.Token;
 using Microsoft.OpenApi.Models;
 using TimedAssignment.Services.Post;
@@ -23,13 +23,30 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
     {
-        c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo {Title = "TimedAssignment.WebAPI", Version = "v1"});
+        c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "TimedAssignment.WebAPI", Version = "v1" });
     });
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<ICommentService, CommentService>();
 builder.Services.AddScoped<IPostService, PostService>();
 builder.Services.AddScoped<IReplyService, ReplyService>();
 builder.Services.AddScoped<IUserService, UserService>();
+
+builder.Services.AddScoped<IUserService, UserService>();
+// Using statement not working: Microsoft.IdentityModel.Tokens for the Token Validation Parameters and Symmetric Security Key not allowing refactoring.
+
+// builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(Options =>
+// {
+//     Options.RequireHttpsMetadata = false;
+//     Options.SaveToken = true;
+//     Options.TokenValidationParameters = new TokenValidationParameters
+//     {
+//         ValidateIssuer = true,
+//         ValidateAudience = true,
+//         ValidIssuer = Configuration["Jwt:Issuer"],
+//         ValidAudience = Configuration["Jwt:Audience"],
+//         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
+//     };
+// });
 
 
 var app = builder.Build();
