@@ -33,14 +33,4 @@ namespace TimedAssignment.WebAPI.Controllers
             return BadRequest("You could not be signed up.");
         }
     }
-
-    // TOKEN ENDPOINT IN USERCONTROLLER NOT WORKING
-
-    // private readonly IUserService _userService;
-    // private readonly ITokenService _tokenService;
-    // public UserController(IUserService userService, ITokenService tokenService)
-    // {
-    //     _userService = userService;
-    //     _tokenService = tokenService;
-    // }
 }
