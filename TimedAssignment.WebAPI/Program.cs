@@ -48,6 +48,7 @@ builder.Services.AddScoped<IUserService, UserService>();
 //     };
 // });
 
+// Pushing update because I suck at pushing to master
 
 var app = builder.Build();
 
