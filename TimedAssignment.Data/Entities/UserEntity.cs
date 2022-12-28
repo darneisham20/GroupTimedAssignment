@@ -17,7 +17,7 @@ namespace TimedAssignment.Data.Entities
         [EmailAddress]
         public string Email { get; set; }
 
-        [Required]        
+        [Required]
         public string Username { get; set; }
         
         [Required]
