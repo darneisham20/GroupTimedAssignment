@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
 namespace TimedAssignment.Services.Post
-{    
+{
     public class PostService : IPostService
     {
-        private readonly int _userId;
+    private readonly int _userId;
         // public PostService(IHttpContextAccessor httpContextAccessor)
         // {
         //     var userClaims = httpContextAccessor.HttpContext.User.Identity as ClaimsIdentity;
