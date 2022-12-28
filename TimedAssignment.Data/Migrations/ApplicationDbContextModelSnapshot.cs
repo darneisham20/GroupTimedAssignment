@@ -43,7 +43,7 @@ namespace TimedAssignment.Data.Migrations
 
                     b.HasIndex("PostIdId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comments", (string)null);
                 });
 
             modelBuilder.Entity("TimedAssignment.Data.Entities.PostEntity", b =>
@@ -67,7 +67,7 @@ namespace TimedAssignment.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Posts");
+                    b.ToTable("Posts", (string)null);
                 });
 
             modelBuilder.Entity("TimedAssignment.Data.Entities.ReplyEntity", b =>
@@ -92,7 +92,7 @@ namespace TimedAssignment.Data.Migrations
 
                     b.HasIndex("CommentIdId");
 
-                    b.ToTable("Replies");
+                    b.ToTable("Replies", (string)null);
                 });
 
             modelBuilder.Entity("TimedAssignment.Data.Entities.UserEntity", b =>
@@ -128,7 +128,7 @@ namespace TimedAssignment.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("TimedAssignment.Data.Entities.CommentEntity", b =>
