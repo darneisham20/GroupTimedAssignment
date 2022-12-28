@@ -8,7 +8,7 @@ namespace TimedAssignment.Services.Comment
 {
     public class CommentService : ICommentService
     {
-        // private readonly int _userId;
+        private readonly int _userId;
         // public CommentService(IHttpContextAccessor httpContextAccessor)
         // {
         //     var userClaims = httpContextAccessor.HttpContext.User.Identity as ClaimsIdentity;
